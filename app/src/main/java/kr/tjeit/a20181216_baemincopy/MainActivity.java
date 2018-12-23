@@ -61,9 +61,13 @@ public class MainActivity extends BaseActivity {
 //                    Toast.makeText(mContext, "피자 눌림", Toast.LENGTH_SHORT).show();
 //                }
 
-//                두번째 방법: XML 파일에 태그로 작성!
-                Toast.makeText(mContext,v.getTag().toString(), Toast.LENGTH_SHORT).show();
+////                두번째 방법: XML 파일에 태그로 작성!
+//                Toast.makeText(mContext,v.getTag().toString(), Toast.LENGTH_SHORT).show();
 
+//
+                Intent intent = new Intent(mContext, RestaurantListActivity.class);
+                intent.putExtra("음식종류", v.getTag().toString());
+                startActivity(intent);
 
             }
         };
